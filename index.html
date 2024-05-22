@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesca una Carta</title>
+    <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(rgba(247, 247, 247, 0.5), rgba(247, 247, 247, 0.5)), url('corvo_steam.jpeg');
+    background-size: cover;
+}
+
+h1, p, .seme {
+    color: #000000;    
+}
+
+button {
+    background-color: #656b70f7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); 
+}
+
+button:hover {
+    background-color: #4372c4;
+}
+
+p {
+    
+    margin-top: 20px;
+}
+
+textarea {
+    background-color: azure;
+    font-size: 18px;
+}
+
+.seme {
+    font-size: 24px;
+}
+
+.cuori, .quadri {
+    color: red;
+}
+
+.fiori, .picche {
+    color: black;
+}
+
+#cartaPescata {
+    display: inline-block;
+    background-color: #c6e6f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3); /* Aggiungi un'ombra per l'effetto 3D */
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.container {
+   display: grid;
+   grid-template-rows: auto 1fr; /* Crea due righe, una per il titolo e una per il contenuto */
+   grid-template-columns: 1fr 1fr; /* Crea due colonne di uguale larghezza */
+   gap: 20px; /* Aggiunge uno spazio tra le righe e le colonne */
+   height: 100vh; /* Imposta l'altezza del container al 100% dell'altezza della viewport */
+}
+
+.titolo {
+    grid-column: span 2; /* Fa sì che il titolo occupi entrambe le colonne */
+    font-size: 48px;
+}
+</style>
+</head>
+<body>
+    <div class="container"> 
+        <h1 class="titolo">Be Like a Crow</h1>    
+        <div>
+            <button id="pescaButton">Pesca una carta</button><br><br>
+            <div id="cartaPescata"></div> 
+            <br><br>
+            <div>
+                <p style="font-size: 20px;"><b>Storico carte pescate:</b></p>
+                <textarea name="carte pescate" id="cimitero"></textarea>
+            </div>
+            <br>
+            <div>
+                <p style="font-size: 20;"><b>Tieni traccia della tua avventura:</b></p>
+                <div style="font-size: 18; font-style: italic;">
+                    <p>Trascina l'icona dal tuo nido ai vari esagoni.</p>
+                    <p>Clicca sulla mappa per aggiungere segnalini</p>
+                    <p>ALT+Click per rimuoverli</p>
+                </div>
+            </div>
+        </div>
+        <div id="mappa" style="width: 1250px; height: 1750px;"></div>
+    </div>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./mappa.js"></script>    
+    <script src="./pesca_carta.js"></script>
+</body>
+</html>
