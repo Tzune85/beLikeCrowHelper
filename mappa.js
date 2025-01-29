@@ -10,12 +10,12 @@ var mappa = L.map('mappa', {
 
 // Crea un'icona personalizzata
 var iconaPersonalizzata = L.icon({
-    iconUrl: './corvo_steam2.jpeg', // Sostituisci con l'URL della tua immagine
+    iconUrl: '/img/corvo_steam2.jpeg', // Sostituisci con l'URL della tua immagine
     iconSize: [50, 50], // Sostituisci con le dimensioni della tua immagine
 });
 
 var tesoro = L.icon({
-    iconUrl: './tesoro.jpeg',
+    iconUrl: '/img/tesoro.jpeg',
     iconSize: [30, 30]
 })
 
@@ -30,7 +30,7 @@ mappa.setMaxBounds(new L.LatLngBounds([
 ]));
 
 // Aggiungi la tua immagine come layer della mappa
-L.imageOverlay('./mappa.jpg', [[-h, -w], [h, w]]).addTo(mappa);
+L.imageOverlay('/img/mappa.jpg', [[-h, -w], [h, w]]).addTo(mappa);
 
 // Aggiungi un marker che utilizza l'icona personalizzata
 var marker = L.marker([0, 0], {

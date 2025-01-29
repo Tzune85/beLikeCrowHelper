@@ -7,7 +7,7 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding: 50px;
-    background: linear-gradient(rgba(247, 247, 247, 0.5), rgba(247, 247, 247, 0.5)), url('corvo_steam.jpeg');
+    background: linear-gradient(rgba(247, 247, 247, 0.5), rgba(247, 247, 247, 0.5)), url('/img/corvo_steam.jpeg');
     background-size: cover;
 }
 
