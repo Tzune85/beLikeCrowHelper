@@ -13,6 +13,8 @@ document.getElementById('pescaButton').addEventListener('click', function() {
     }
     var cartaPescata = mazzo[Math.floor(Math.random() * mazzo.length)];
     document.getElementById('cartaPescata').innerHTML = "Hai pescato il " + cartaPescata;
+    document.getElementById('cartaPescata').classList.add('flex');
+    document.getElementById('storico').classList.add('flex');
 
     // Crea un elemento div temporaneo e imposta il suo innerHTML come cartaPescata
     var divTemp = document.createElement('div');
@@ -31,10 +33,13 @@ document.getElementById('pescaButton').addEventListener('click', function() {
     }
     // Aggiorna il cimitero con le ultime 10 carte pescate
     cimitero.value = cartePescate.join('\n');
-    function aggiornaAltezza() {
-    cimitero.style.height = 'auto';
-    cimitero.style.height = cimitero.scrollHeight + 'px';
+    function aggiornaAltezza() {        
+        cimitero.style.height = 'auto';
+        cimitero.style.height = cimitero.scrollHeight + 'px';
     }
     cimitero.addEventListener('input', aggiornaAltezza);
+    
+
     aggiornaAltezza();
+
     }) 

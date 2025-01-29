@@ -1,42 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
     text-align: center;
     padding: 50px;
     background: linear-gradient(rgba(247, 247, 247, 0.5), rgba(247, 247, 247, 0.5)), url('corvo_steam.jpeg');
     background-size: cover;
 }
 
-h1,
-p,
-.seme {
+.titolo {
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
     color: #000000;
 }
 
-button {
-    background-color: #656b70f7;
-    color: white;
+#pescaButton {
+    background-color: #656b70;
+    color: #ccc;
     border: none;
     padding: 10px 20px;
-    margin: 20px 0;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 button:hover {
-    background-color: #4372c4;
+    opacity: 0.9;
 }
 
-p {
-
-    margin-top: 20px;
+.seme {
+    color: #000000;
 }
+
 
 textarea {
-    background-color: azure;
+    background-color: #cbe4ee8a;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
     font-size: 18px;
+    overflow: hidden;
 }
 
 .seme {
@@ -54,31 +63,51 @@ textarea {
 }
 
 #cartaPescata {
-    display: inline-block;
-    background-color: #c6e6f3;
-    padding: 20px;
+    display: none;
+    background-color: #cbe4eee0;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-    /* Aggiungi un'ombra per l'effetto 3D */
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 24px;
     text-align: center;
+    justify-self: center;
+}
+
+#storico {
+    display: none;
+}
+
+.flex {
+    display: block !important;
 }
 
 .container {
     display: grid;
-    grid-template-rows: auto 1fr;
-    /* Crea due righe, una per il titolo e una per il contenuto */
-    grid-template-columns: 1fr 1fr;
-    /* Crea due colonne di uguale larghezza */
-    gap: 20px;
-    /* Aggiunge uno spazio tra le righe e le colonne */
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px;
     height: 100vh;
-    /* Imposta l'altezza del container al 100% dell'altezza della viewport */
+    justify-content: center;
+    margin-top: 25px;
 }
 
-.titolo {
-    grid-column: span 2;
-    /* Fa sì che il titolo occupi entrambe le colonne */
-    font-size: 48px;
+#mappa {
+    grid-column: 2 / span 3;
+    width: 1250px;
+    height: 1750px;
+}
+
+.info {
+    background: #c4c4c459;
+    height: auto;
+    width: auto;
+    justify-self: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18;
+    font-style: italic;
 }
